@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "kill-port 3000",
     "dev": "next dev",
-    "build": "cross-env NODE_OPTIONS=--max-old-space-size=6144 next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
