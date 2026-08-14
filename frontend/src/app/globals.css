@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  ────────────────────────────────────────────────────────────
+  BRANDQUBE COLOR TOKENS  — extracted directly from PDF branding.
+  Primary Sky Blue:     #009BE3 (RGB 0 155 227)
+  Deep Navy Ink:        #16284F (RGB 22 40 79)
+  Coral Crimson Accent: #EE3542 (RGB 238 53 66)
+  Steel Ocean Blue:     #1A528E (RGB 26 82 142)
+  Light Sky Tint:       #E6F5FC (RGB 230 245 252)
+  ────────────────────────────────────────────────────────────
+*/
+:root {
+  --c-bg: 255 255 255;        /* #FFFFFF page */
+  --c-surface: 246 250 253;   /* #F6FAFD card fill (subtle sky tint) */
+  --c-surface-2: 250 253 255; /* #FAFDFF elevated section */
+  --c-fg: 22 40 79;           /* #16284F deep navy text from PDF */
+  --c-muted: 82 102 132;      /* #526684 muted navy-grey */
+  --c-primary: 0 155 227;     /* #009BE3 brand sky blue from PDF */
+  --c-secondary: 22 40 79;    /* #16284F deep navy from PDF */
+  --c-accent: 238 53 66;      /* #EE3542 brand red accent from PDF */
+  --c-tint: 230 245 252;      /* #E6F5FC light sky blue wash */
+  --c-border: 224 236 245;    /* #E0ECF5 subtle border */
+  --c-hairline: 236 244 250;  /* #ECF4FA hairline */
+
+  /* Fixed brand anchors for gradients / dark sections / overlays */
+  --brand: 0 155 227;         /* #009BE3 */
+  --brand-light: 0 155 227;   /* #009BE3 */
+  --brand-accent: 238 53 66;  /* #EE3542 */
+  --ink: 22 40 79;            /* #16284F deep navy canvas from PDF */
+  --ink-700: 22 40 79;        /* #16284F */
+  --ink-500: 34 58 107;       /* #223B70 */
+
+  color-scheme: light;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* Lenis owns smooth scroll */
+    /* Kill native scrollbars completely */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+  }
+
+  ::selection {
+    background: rgb(var(--c-primary));
+    color: #ffffff;
+  }
+
+  /* Brand-tinted focus ring */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-primary));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1, h2 {
+    @apply font-display;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  h3, h4 {
+    @apply font-sans;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.011em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  .font-display {
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Page shell with fluid responsive gutters */
+  .container-bq {
+    @apply mx-auto w-full max-w-content;
+    padding-left: clamp(1.25rem, 4vw, 3rem);
+    padding-right: clamp(1.25rem, 4vw, 3rem);
+  }
+
+  /* Uppercase tracked label used across sections */
+  .eyebrow {
+    @apply font-sans text-eyebrow font-bold uppercase text-primary;
+  }
+
+  /* Editorial hairline divider */
+  .rule {
+    @apply h-px w-full bg-hairline;
+  }
+
+  /* Frosted glass surface (navbar, chips) */
+  .glass {
+    background: rgb(var(--c-bg) / 0.78);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+  }
+}
+
+@layer utilities {
+  /* Gradient text on the brand sky blue → crimson red ramp */
+  .text-gradient {
+    background-image: linear-gradient(120deg, #009be3, #ee3542);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Pure sky blue gradient text */
+  .text-gradient-sky {
+    background-image: linear-gradient(120deg, #009be3, #009be3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* The "lit-sign" glow */
+  .glow-brand {
+    box-shadow: 0 0 60px -10px rgba(0, 155, 227, 0.5);
+  }
+
+  /* Photo legibility scrim: bottom-up deep navy */
+  .scrim-ink {
+    background: linear-gradient(
+      to top,
+      rgba(22, 40, 79, 0.92) 0%,
+      rgba(22, 40, 79, 0.4) 45%,
+      rgba(22, 40, 79, 0) 78%
+    );
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .will-fade {
+    will-change: opacity, transform;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lenis smooth-scroll baseline */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
