@@ -14,7 +14,7 @@ type WallWrapAsset = {
   imageUrl: string;
 };
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
 
 const FALLBACK_ASSETS: WallWrapAsset[] = [
   {

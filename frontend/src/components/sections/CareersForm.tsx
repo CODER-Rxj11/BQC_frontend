@@ -79,7 +79,8 @@ export function CareersForm() {
     };
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+      const apiUrl = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
+
       const res = await fetch(`${apiUrl}/api/careers`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

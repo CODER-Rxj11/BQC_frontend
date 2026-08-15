@@ -14,7 +14,7 @@ import { clients as fallbackNames } from "@/lib/data";
  */
 type ClientLogo = { id: string; name: string; logoUrl: string };
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
 
 // Responsive fluid gap — perfectly spaced across phones, tablets, and wide screens
 const GAP = "gap-[clamp(2.5rem,6vw,6rem)] pr-[clamp(2.5rem,6vw,6rem)]";

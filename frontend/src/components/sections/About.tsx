@@ -14,7 +14,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
  * Founder story on the left; real wall wrap image on the right; proof stats below.
  */
 export function About() {
-  const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+  const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
   const [ourImage, setOurImage] = useState<{ imageUrl?: string; alt?: string } | null>(null);
 
   useEffect(() => {
