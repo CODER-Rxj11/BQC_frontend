@@ -8,14 +8,13 @@ import { Button } from "@/components/ui/Button";
 import { projects as fallbackProjects, type Project } from "@/lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
+const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
 
-const API = cc
 
-/**
- * Portfolio — "Gallery of the Streets" (blueprint §2.4).
- * Asymmetric editorial grid: featured case spans full width, the rest tile in
- * a deliberately uneven grid for editorial tension.
- */
+//  * Portfolio — "Gallery of the Streets" (blueprint §2.4).
+//  * Asymmetric editorial grid: featured case spans full width, the rest tile in
+//  * a deliberately uneven grid for editorial tension.
+
 export function Portfolio() {
   const [items, setItems] = useState<Project[]>(fallbackProjects);
 
