@@ -15,10 +15,47 @@ type CorporateAsset = {
 };
 
 const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
-
+const FALLBACK_ASSETS: CorporateAsset[] = [
+  {
+    id: "As01.png",
+    filename: "As01.png",
+    client: "Apollo Sage Hospitals",
+    title: "Apollo Sage Hospitals Corporate Event & Stage Setup",
+    channel: "Corporate Events",
+    year: "2025",
+    imageUrl: "/seed_assets/coorporate_events/As01.png",
+  },
+  {
+    id: "As02.png",
+    filename: "As02.png",
+    client: "Apollo Sage Hospitals",
+    title: "Apollo Sage Hospitals Annual Conference & Exhibition Backdrop",
+    channel: "Corporate Events",
+    year: "2025",
+    imageUrl: "/seed_assets/coorporate_events/As02.png",
+  },
+  {
+    id: "As03.png",
+    filename: "As03.png",
+    client: "Apollo Sage Hospitals",
+    title: "Apollo Sage Hospitals Corporate Branding & Stationery Kit",
+    channel: "Corporate Events",
+    year: "2025",
+    imageUrl: "/seed_assets/coorporate_events/As03.png",
+  },
+  {
+    id: "As04.png",
+    filename: "As04.png",
+    client: "Apollo Sage Hospitals",
+    title: "Apollo Sage Hospitals Event Reception & Directional Signage",
+    channel: "Corporate Events",
+    year: "2025",
+    imageUrl: "/seed_assets/coorporate_events/As04.png",
+  },
+];
 export function CorporateEventsWorkGallery() {
-  const [assets, setAssets] = useState<CorporateAsset[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [assets, setAssets] = useState<CorporateAsset[]>(FALLBACK_ASSETS);
+  const [loading, setLoading] = useState(false);
   const [activeImage, setActiveImage] = useState<CorporateAsset | null>(null);
 
   useEffect(() => {
@@ -26,7 +63,7 @@ export function CorporateEventsWorkGallery() {
     fetch(`${API}/api/corporate-events-assets`, { signal: controller.signal })
       .then((res) => (res.ok ? res.json() : []))
       .then((data) => {
-        if (Array.isArray(data)) setAssets(data);
+        if (Array.isArray(data) && data.length > 0) setAssets(data);
       })
       .catch((err) => {
         console.warn("Could not fetch corporate event assets from backend:", err);
