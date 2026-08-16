@@ -24,7 +24,7 @@ const FALLBACK_ASSETS: WallWrapAsset[] = [
     title: "Ather Space Asli Electric Wall Wrap Branding",
     channel: "Wall Wrap Advertising",
     year: "2025",
-    imageUrl: `${API}/seed_assets/wall_wrap/ather01.png`,
+    imageUrl: "/seed_assets/wall_wrap/ather01.png",
   },
   {
     id: "ather02.png",
@@ -33,7 +33,7 @@ const FALLBACK_ASSETS: WallWrapAsset[] = [
     title: "Ather Space High-Impact Highway Wall Wrap",
     channel: "Wall Wrap Advertising",
     year: "2025",
-    imageUrl: `${API}/seed_assets/wall_wrap/ather02.png`,
+     imageUrl: "/seed_assets/wall_wrap/ather02.png",
   },
   {
     id: "tvs01.png",
@@ -42,7 +42,7 @@ const FALLBACK_ASSETS: WallWrapAsset[] = [
     title: "TVS Apache RTR 160 Large-Format Wall Graphic",
     channel: "Wall Wrap Advertising",
     year: "2025",
-    imageUrl: `${API}/seed_assets/wall_wrap/tvs01.png`,
+     imageUrl: "/seed_assets/wall_wrap/tvs01.png",
   },
   {
     id: "tvs02.png",
@@ -51,7 +51,7 @@ const FALLBACK_ASSETS: WallWrapAsset[] = [
     title: "TVS Star City Plus Rural Commercial Wall Wrap",
     channel: "Wall Wrap Advertising",
     year: "2025",
-    imageUrl: `${API}/seed_assets/wall_wrap/tvs02.png`,
+   imageUrl: "/seed_assets/wall_wrap/tvs02.png",
   },
   {
     id: "tvs03.png",
@@ -60,7 +60,7 @@ const FALLBACK_ASSETS: WallWrapAsset[] = [
     title: "TVS Radeon High-Visibility Storefront Wall Media",
     channel: "Wall Wrap Advertising",
     year: "2025",
-    imageUrl: `${API}/seed_assets/wall_wrap/tvs03.png`,
+     imageUrl: "/seed_assets/wall_wrap/tvs03.png",
   },
   {
     id: "tvs04.png",
@@ -69,7 +69,7 @@ const FALLBACK_ASSETS: WallWrapAsset[] = [
     title: "TVS Apache Racer's Choice Billboard & Wall Wrap",
     channel: "Wall Wrap Advertising",
     year: "2025",
-    imageUrl: `${API}/seed_assets/wall_wrap/tvs04.png`,
+    imageUrl: "/seed_assets/wall_wrap/tvs04.png",
   },
 ];
 
