@@ -15,9 +15,76 @@ type ShowroomAsset = {
 };
 
 const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
+
+
+const FALLBACK_ASSETS: ShowroomAsset[] = [
+  {
+    id: "as01.png",
+    filename: "as01.png",
+    client: "Apollo Sage Hospitals",
+    title: "Apollo Sage Hospitals Showroom Exterior Elevation & ACP Cladding",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/as01.png",
+  },
+  {
+    id: "ms01.png",
+    filename: "ms01.png",
+    client: "Maruti Suzuki",
+    title: "Maruti Suzuki Showroom Exterior Elevation & ACP Cladding",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/ms01.png",
+  },
+  {
+    id: "ms02.png",
+    filename: "ms02.png",
+    client: "Maruti Suzuki",
+    title: "Maruti Suzuki Showroom Interior Signage & Reception Setup",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/ms02.png",
+  },
+  {
+    id: "tvs01.png",
+    filename: "tvs01.png",
+    client: "TVS Motors",
+    title: "TVS Showroom Exterior Elevation & ACP Cladding",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/tvs01.png",
+  },
+  {
+    id: "tvs06.png",
+    filename: "tvs06.png",
+    client: "TVS Motors",
+    title: "TVS Large Showroom Brand Facade & Illuminated Signage",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/tvs06.png",
+  },
+  {
+    id: "vedanta01.png",
+    filename: "vedanta01.png",
+    client: "Vedanta Group",
+    title: "Vedanta Group Showroom Development & ACP Cladding",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/vedanta01.png",
+  },
+  {
+    id: "vp01.png",
+    filename: "vp01.png",
+    client: "PhysicsWallah Vidyapeeth",
+    title: "PhysicsWallah Vidyapeeth Showroom Development",
+    channel: "Showroom Development",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/vp01.png",
+  },
+];
 export function ShowroomWorkGallery() {
-  const [assets, setAssets] = useState<ShowroomAsset[]>([]);
-  const [loading, setLoading] = useState(true);
+   const [assets, setAssets] = useState<ShowroomAsset[]>(FALLBACK_ASSETS);
+  const [loading, setLoading] = useState(false);
   const [activeImage, setActiveImage] = useState<ShowroomAsset | null>(null);
 
   useEffect(() => {
@@ -25,7 +92,7 @@ export function ShowroomWorkGallery() {
     fetch(`${API}/api/showroom-assets`, { signal: controller.signal })
       .then((res) => (res.ok ? res.json() : []))
       .then((data) => {
-        if (Array.isArray(data)) setAssets(data);
+         if (Array.isArray(data) && data.length > 0) setAssets(data);
       })
       .catch((err) => {
         console.warn("Could not fetch showroom assets from backend:", err);
