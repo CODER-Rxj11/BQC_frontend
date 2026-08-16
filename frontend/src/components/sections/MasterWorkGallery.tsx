@@ -9,6 +9,7 @@ type WorkAsset = {
   client: string;
   title: string;
   channel: string;
+  category?: string;
   year: string;
   imageUrl: string;
 };
@@ -25,9 +26,72 @@ const CATEGORIES = [
   "Corporate Events",
 ];
 
+const FALLBACK_MASTER_ASSETS: WorkAsset[] = [
+  {
+    id: "ather01.png",
+    filename: "ather01.png",
+    client: "Ather Energy",
+    title: "Ather Energy Large-Format Wall Wrap Advertising",
+    channel: "Wall Wrap Advertising",
+    category: "wall-wrap",
+    year: "2025",
+    imageUrl: "/seed_assets/wall_wrap/ather01.png",
+  },
+  {
+    id: "ms01.png",
+    filename: "ms01.png",
+    client: "Maruti Suzuki",
+    title: "Maruti Suzuki Showroom Exterior Elevation & ACP Cladding",
+    channel: "Showroom Development",
+    category: "showroom",
+    year: "2025",
+    imageUrl: "/seed_assets/showroom_development/ms01.png",
+  },
+  {
+    id: "tvs01.png",
+    filename: "tvs01.png",
+    client: "TVS Motors",
+    title: "TVS Jupiter Bus Panel Transit Advertising",
+    channel: "Outdoor & Transit",
+    category: "transit",
+    year: "2025",
+    imageUrl: "/seed_assets/transit/tvs01.png",
+  },
+  {
+    id: "gulf01.png",
+    filename: "gulf01.png",
+    client: "Gulf Oil",
+    title: "Gulf Oil Damdaron Ka Damdar Demo Van Campaign",
+    channel: "Demo Van Campaigns",
+    category: "demovan",
+    year: "2025",
+    imageUrl: "/seed_assets/Demo_Van/gulf01.png",
+  },
+  {
+    id: "hero01.png",
+    filename: "hero01.png",
+    client: "Hero MotoCorp",
+    title: "Hero MotoCorp On-Ground Mela Stall & Experiential Activation",
+    channel: "On-Ground Activations",
+    category: "mela",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/hero01.png",
+  },
+  {
+    id: "As01.png",
+    filename: "As01.png",
+    client: "Apollo Sage Hospitals",
+    title: "Apollo Sage Hospitals Corporate Event & Stage Setup",
+    channel: "Corporate Events",
+    category: "corporate",
+    year: "2025",
+    imageUrl: "/seed_assets/coorporate_events/As01.png",
+  },
+];
+
 export function MasterWorkGallery() {
-  const [assets, setAssets] = useState<WorkAsset[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [assets, setAssets] = useState<WorkAsset[]>(FALLBACK_MASTER_ASSETS);
+  const [loading, setLoading] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All Work");
   const [activeImage, setActiveImage] = useState<WorkAsset | null>(null);
 
