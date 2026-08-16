@@ -16,9 +16,65 @@ type MelaAsset = {
 
 const API = (process.env.NEXT_PUBLIC_API_URL || "http://bqc-backend-1.onrender.com").replace(/\/$/,"");
 
+const FALLBACK_ASSETS: MelaAsset[] = [
+  {
+    id: "bajaj01.png",
+    filename: "bajaj01.png",
+    client: "Bajaj Auto",
+    title: "Bajaj Auto On-Ground Mela Stall & Experiential Activation",
+    channel: "On-Ground Activations",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/bajaj01.png",
+  },
+  {
+    id: "hero01.png",
+    filename: "hero01.png",
+    client: "Hero MotoCorp",
+    title: "Hero MotoCorp On-Ground Mela Stall & Experiential Activation",
+    channel: "On-Ground Activations",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/hero01.png",
+  },
+  {
+    id: "mahindra01.png",
+    filename: "mahindra01.png",
+    client: "Mahindra",
+    title: "Mahindra Live Tractor & Vehicle Display Activation",
+    channel: "On-Ground Activations",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/mahindra01.png",
+  },
+  {
+    id: "tata_agni01.png",
+    filename: "tata_agni01.png",
+    client: "Tata Tea Agni",
+    title: "Tata Tea Agni Mela Engagement & Sampling Stall",
+    channel: "On-Ground Activations",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/tata_agni01.png",
+  },
+  {
+    id: "tvs01.png",
+    filename: "tvs01.png",
+    client: "TVS Motors",
+    title: "TVS Motors On-Ground Mela Stall & Experiential Activation",
+    channel: "On-Ground Activations",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/tvs01.png",
+  },
+  {
+    id: "Mpph.png",
+    filename: "Mpph.png",
+    client: "MP Police Headquarters",
+    title: "MP Police Headquarters Public Awareness Pavilion",
+    channel: "On-Ground Activations",
+    year: "2025",
+    imageUrl: "/seed_assets/Mela_activity/Mpph.png",
+  },
+];
 export function MelaWorkGallery() {
-  const [assets, setAssets] = useState<MelaAsset[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [assets, setAssets] = useState<MelaAsset[]>(FALLBACK_ASSETS);
+  const [loading, setLoading] = useState(false);
   const [activeImage, setActiveImage] = useState<MelaAsset | null>(null);
 
   useEffect(() => {
@@ -26,7 +82,7 @@ export function MelaWorkGallery() {
     fetch(`${API}/api/mela-assets`, { signal: controller.signal })
       .then((res) => (res.ok ? res.json() : []))
       .then((data) => {
-        if (Array.isArray(data)) setAssets(data);
+       if (Array.isArray(data) && data.length > 0) setAssets(data);
       })
       .catch((err) => {
         console.warn("Could not fetch mela assets from backend:", err);
