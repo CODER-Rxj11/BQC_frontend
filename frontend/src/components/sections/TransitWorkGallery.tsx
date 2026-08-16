@@ -24,7 +24,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "TVS Jupiter Bus Panel Transit Advertising",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/tvs01.png`,
+   imageUrl: "/seed_assets/transit/tvs01.png",
   },
   {
     id: "tvs02.png",
@@ -33,7 +33,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "TVS Apache Auto Hood Mobility Branding",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/tvs02.png`,
+   imageUrl: "/seed_assets/transit/tvs02.png",
   },
   {
     id: "tvs03.png",
@@ -42,7 +42,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "TVS Radeon City Bus Side Wrap Branding",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/tvs03.png`,
+    imageUrl: "/seed_assets/transit/tvs03.png",
   },
   {
     id: "tvs04.png",
@@ -51,7 +51,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "TVS Star City Auto Hood Fleet Advertising",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/tvs04.png`,
+     imageUrl: "/seed_assets/transit/tvs04.png",
   },
   {
     id: "pw01.png",
@@ -60,7 +60,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "PhysicsWallah Vidyapeeth Bus & Transit Media",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/pw01.png`,
+      imageUrl: "/seed_assets/transit/pw01.png",
   },
   {
     id: "pw02.png",
@@ -69,7 +69,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "PhysicsWallah Vidyapeeth Auto Hood & Transit Advertising",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/pw02.png`,
+    imageUrl: "/seed_assets/transit/pw02.png",
   },
   {
     id: "as01.png",
@@ -78,7 +78,7 @@ const FALLBACK_ASSETS: TransitAsset[] = [
     title: "Apollo Sage Hospitals Transit & Ambulance Branding",
     channel: "Outdoor & Transit",
     year: "2025",
-    imageUrl: `${API}/seed_assets/transit/as01.png`,
+   imageUrl: "/seed_assets/transit/as01.png",
   },
 ];
 
