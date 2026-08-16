@@ -24,7 +24,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Ather Energy Mobile EV Demo Van Activation",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/Ather01.png`,
+     imageUrl: "/seed_assets/Demo_Van/Ather01.png",
   },
   {
     id: "Ather02.png",
@@ -33,7 +33,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Ather Energy On-Ground Test Ride & Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/Ather02.png`,
+  imageUrl: "/seed_assets/Demo_Van/Ather02.png",
   },
   {
     id: "gulf01.png",
@@ -42,7 +42,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Gulf Oil Damdaron Ka Damdar Demo Van Campaign",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/gulf01.png`,
+  imageUrl: "/seed_assets/Demo_Van/gulf01.png",
   },
   {
     id: "gulf02.png",
@@ -51,7 +51,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Gulf Oil Rural Outreach Mobile Marketing Unit",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/gulf02.png`,
+   imageUrl: "/seed_assets/Demo_Van/gulf02.png",
   },
   {
     id: "gulf03.png",
@@ -60,7 +60,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Gulf XHD Supreme Tractor Oil Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/gulf03.png`,
+  imageUrl: "/seed_assets/Demo_Van/gulf03.png",
   },
   {
     id: "hero01.png",
@@ -69,7 +69,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Hero Destini 110 Strong Metal Body Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/hero01.png`,
+    imageUrl: "/seed_assets/Demo_Van/hero01.png",
   },
   {
     id: "hero02.png",
@@ -78,7 +78,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Hero Scooter Ka Hero Promotional Display Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/hero02.png`,
+   imageUrl: "/seed_assets/Demo_Van/hero02.png",
   },
   {
     id: "hero03.png",
@@ -87,7 +87,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Hero Rural Outreach & Interactive Roadshow Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/hero03.png`,
+    imageUrl: "/seed_assets/Demo_Van/hero03.png",
   },
   {
     id: "jio_cinema.png",
@@ -96,7 +96,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Jio Cinema Free Streaming Experiential Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/jio_cinema.png`,
+  imageUrl: "/seed_assets/Demo_Van/jio_cinema.png",
   },
   {
     id: "maaza.png",
@@ -105,7 +105,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Maaza Asli Aam Wala Large-Format Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/maaza.png`,
+   imageUrl: "/seed_assets/Demo_Van/maaza.png",
   },
   {
     id: "maaza02.png",
@@ -114,7 +114,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Maaza Moving Advertisement & Bottle Installation Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/maaza02.png`,
+   imageUrl: "/seed_assets/Demo_Van/maaza02.png",
   },
   {
     id: "maaza03.png",
@@ -123,7 +123,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Maaza Dynamic Consumer Engagement Display Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/maaza03.png`,
+     imageUrl: "/seed_assets/Demo_Van/maaza03.png",
   },
   {
     id: "ms01.png",
@@ -132,7 +132,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Maruti Suzuki Brezza Truck Platform Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/ms01.png`,
+ imageUrl: "/seed_assets/Demo_Van/ms01.png",
   },
   {
     id: "ph01.png",
@@ -141,7 +141,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "MP Police Sanjeevani Clinic 2.0 Mobile Awareness Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/ph01.png`,
+    imageUrl: "/seed_assets/Demo_Van/ph01.png",
   },
   {
     id: "ph02.png",
@@ -150,7 +150,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "MP Police Public Outreach & Awareness Vehicle",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/ph02.png`,
+    imageUrl: "/seed_assets/Demo_Van/ph02.png",
   },
   {
     id: "tata_tea.png",
@@ -159,7 +159,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Tata Tea Agni Fleet Demo Vans Roadshow",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tata_tea.png`,
+    imageUrl: "/seed_assets/Demo_Van/tata_tea.png",
   },
   {
     id: "tata_tea02.png",
@@ -168,7 +168,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "Tata Tea Agni Rural Outreach & Sampling Vans",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tata_tea02.png`,
+     imageUrl: "/seed_assets/Demo_Van/tata_tea02.png",
   },
   {
     id: "tvs01.png",
@@ -177,7 +177,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "TVS Radeon Buland Sawari Display Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tvs01.png`,
+    imageUrl: "/seed_assets/Demo_Van/tvs01.png",
   },
   {
     id: "tvs02.png",
@@ -186,7 +186,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "TVS Live Vehicle Demo & Customer Outreach Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tvs02.png`,
+    imageUrl: "/seed_assets/Demo_Van/tvs02.png",
   },
   {
     id: "tvs03.png",
@@ -195,7 +195,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "TVS Test Ride Opportunities Mobile Unit",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tvs03.png`,
+    imageUrl: "/seed_assets/Demo_Van/tvs03.png",
   },
   {
     id: "tvs04.png",
@@ -204,7 +204,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "TVS Hydraulic Display Platform Demo Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tvs04.png`,
+    imageUrl: "/seed_assets/Demo_Van/tvs04.png",
   },
   {
     id: "tvs05.png",
@@ -213,7 +213,7 @@ const FALLBACK_ASSETS: DemoVanAsset[] = [
     title: "TVS Apache RTR 160 Racing Mobile Brand Van",
     channel: "Demo Van Campaigns",
     year: "2025",
-    imageUrl: `${API}/seed_assets/Demo_Van/tvs05.png`,
+    imageUrl: "/seed_assets/Demo_Van/tvs05.png",
   },
 ];
 
